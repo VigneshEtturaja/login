@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Login/Sign up Page</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div id="login-form">
+            <h1>Login</h1>
+            <div class="input-box">
+                <i class="bx bxs-user"></i>
+                <input type="text" placeholder="Username" required>
+            </div>
+            <div class="input-box">
+                <i class="bx bxs-lock"></i>
+                <input type="password" placeholder="Password" required>
+            </div>
+            <button class="btn">Login</button>
+            <p class="toggle-btn" onclick="toggleForms()">Don't have an account? Register</p>
+        </div>
+
+        <div id="register-form" class="hidden">
+            <h1>Register</h1>
+            <div class="input-box">
+                <i class="bx bxs-user"></i>
+                <input type="text" placeholder="Username" required>
+            </div>
+            <div class="input-box">
+                <i class="bx bxs-envelope"></i>
+                <input type="email" placeholder="Email" required>
+            </div>
+            <div class="input-box">
+                <i class="bx bxs-phone"></i>
+                <input type="tel" placeholder="Mobile Number" required minlength="10" maxlength="10">
+            </div>
+            
+            <div class="input-box">
+                <i class="bx bxs-lock"></i>
+                <input type="password" placeholder="Password" required>
+            </div>
+            <div class="input-box">
+                <i class="bx bxs-lock"></i>
+                <input type="password" placeholder="confirm-Password" required>
+            </div>
+            <button class="btn">Register</button>
+            <p class="toggle-btn" onclick="toggleForms()">Already have an account? Login</p>
+            <p style="margin-top: 10px;">or register with social platforms</p>
+            <div class="social-icons">
+                <i class="bx bxl-google"></i>
+                <i class="bx bxl-facebook"></i>
+                <i class="bx bxl-linkedin"></i>
+                <i class="bx bxl-github"></i>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleForms() {
+            document.getElementById('login-form').classList.toggle('hidden');
+            document.getElementById('register-form').classList.toggle('hidden');
+        }
+    </script>
+
+</body>
+</html>
